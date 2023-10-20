@@ -1,0 +1,39 @@
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background: lightblue;
+}
+
+.card-back {
+    background: lightgreen;
+    transform: rotateY(180deg);
+}
+
+.question-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
